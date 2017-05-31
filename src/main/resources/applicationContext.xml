@@ -10,8 +10,8 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.zhengxt.templet.*" />
-
+    <context:component-scan base-package="com.zhengxt" />
+    <!--<bean id="userService" class="com.zhengxt.templet.service.UserServiceImpl"/>-->
     <!-- ************ JPA configuration *********** -->
     <!--    <tx:annotation-driven transaction-manager="transactionManager" />
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">

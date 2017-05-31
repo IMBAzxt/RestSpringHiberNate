@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.zhengxt.templet.controller;
+package com.zhengxt.templet.resource;
 
+import com.zhengxt.templet.service.UserService;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
@@ -17,10 +19,13 @@ import javax.ws.rs.core.MediaType;
 @Path("user")
 public class UserRest {
 
+    @Autowired
+    UserService userService;
+
     @GET
     @Path("count")
     @Produces(MediaType.TEXT_PLAIN)
     public int count() {
-        return 11;
+        return userService.findUserCount();
     }
 }

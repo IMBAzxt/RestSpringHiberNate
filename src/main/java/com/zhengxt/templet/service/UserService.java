@@ -5,6 +5,8 @@
  */
 package com.zhengxt.templet.service;
 
+import com.zhengxt.templet.dao.Users;
+
 /**
  *
  * @author ThinkPad
@@ -12,4 +14,8 @@ package com.zhengxt.templet.service;
 public interface UserService {
 
     public int findUserCount();
+
+    public Users findUserById(Long id);
+
+    public void saveUser(Users users);
 }

@@ -5,7 +5,11 @@
  */
 package com.zhengxt.templet.service;
 
+import com.zhengxt.templet.dao.Users;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -14,9 +18,23 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
+    @PersistenceContext
+    private EntityManager entityManager;
+
     @Override
     public int findUserCount() {
         return 123;
+    }
+
+    @Override
+    public Users findUserById(Long id) {
+        return entityManager.find(Users.class, id);
+    }
+
+    @Override
+    @Transactional
+    public void saveUser(Users users) {
+        entityManager.persist(users);
     }
 
 }

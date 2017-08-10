@@ -5,7 +5,7 @@
  */
 package com.zhengxt.templet.service;
 
-import com.zhengxt.templet.dao.Users;
+import com.zhengxt.templet.entity.Users;
 
 /**
  *

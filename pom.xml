@@ -21,6 +21,17 @@
     </properties>
     
     <dependencies>
+        <!-- Spring data elasticsearch 对 elasticsearch api 简化封装 -->
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-elasticsearch</artifactId>
+            <version>2.0.4.RELEASE</version>
+        </dependency>
         <!--slf4j-->
         <dependency>
             <groupId>org.slf4j</groupId>

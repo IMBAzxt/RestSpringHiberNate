@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.zhengxt.templet.service;
+package com.zhengxt.template.service;
 
-import com.zhengxt.templet.entity.Users;
+import com.zhengxt.template.entity.Users;
 
 /**
  *

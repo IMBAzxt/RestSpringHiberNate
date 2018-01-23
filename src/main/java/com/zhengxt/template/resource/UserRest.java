@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.zhengxt.templet.resource;
+package com.zhengxt.template.resource;
 
-import com.zhengxt.templet.entity.Users;
-import com.zhengxt.templet.service.UserService;
+import com.zhengxt.template.entity.Users;
+import com.zhengxt.template.service.UserService;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -24,10 +25,13 @@ public class UserRest {
     @Autowired
     UserService userService;
 
+    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(UserRest.class);
+
     @GET
     @Path("count")
     @Produces(MediaType.TEXT_PLAIN)
     public int count() {
+        logger.info("系统时间:" + System.currentTimeMillis());
         return userService.findUserCount();
     }
 

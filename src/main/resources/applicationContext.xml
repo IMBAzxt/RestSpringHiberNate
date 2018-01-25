@@ -46,4 +46,5 @@
            class="org.springframework.data.elasticsearch.core.ElasticsearchTemplate">
         <constructor-arg name="client" ref="client" />
     </bean>
+
 </beans>
